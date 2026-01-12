@@ -33,9 +33,13 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
 
-      <NavLink to='/' onClick={()=> setOpen(false)}>
-        <img className="h-9" src={assets.logo} alt="logo" />
-      </NavLink>
+<NavLink to='/' onClick={() => setOpen(false)} className="flex items-center">
+  <span className="text-2xl font-bold tracking-tight">
+    <span className="text-green-500">Home</span>
+    <span className="text-gray-800">Cart</span>
+  </span>
+</NavLink>
+
 
       <div className="hidden sm:flex items-center gap-8">
         <NavLink to='/'>Home</NavLink>
@@ -108,3 +112,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
